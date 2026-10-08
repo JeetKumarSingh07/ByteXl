@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Built-in Form Validation</title>
+</head>
+<body>
+
+<h1>Built-in Form Validation</h1>
+
+<form>
+
+    <label>Name (required)</label><br>
+    <input type="text" required><br><br>
+
+    <label>Email (must contain @)</label><br>
+    <input type="email" required><br><br>
+
+    <label>Username (4 to 12 characters)</label><br>
+    <input type="text" minlength="4" maxlength="12" required><br><br>
+
+    <label>Password (at least 8 characters)</label><br>
+    <input type="password" minlength="8" required><br><br>
+
+    <label>Age (18 to 30)</label><br>
+    <input type="number" min="18" max="30" required><br><br>
+
+    <label>Marks (0 to 100, steps of 0.5)</label><br>
+    <input type="number" min="0" max="100" step="0.5" required><br><br>
+
+    <label>Exam date (only in October 2026)</label><br>
+    <input type="date" min="2026-10-01" max="2026-10-31" required><br><br>
+
+    <label>Mobile number</label><br>
+    <input type="tel" pattern="\+91\s[0-9]{10}" 
+           placeholder="+91 1234567890" required><br><br>
+
+    <label>PIN code</label><br>
+    <input type="text" pattern="[0-9]{6}" 
+           placeholder="6-digit PIN" required><br><br>
+
+    <label>Roll number (e.g. CSE2026)</label><br>
+    <input type="text" pattern="CSE[0-9]{4}" 
+           placeholder="CSE2026" required><br><br>
+
+    <fieldset>
+        <legend>Batch (pick one)</legend>
+
+        <input type="radio" name="batch" value="morning" required>
+        <label>Morning</label>
+
+        <input type="radio" name="batch" value="evening">
+        <label>Evening</label>
+    </fieldset>
+
+    <br>
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
